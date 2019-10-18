@@ -1,62 +1,66 @@
 ---
-title: Getting started
+title: Coding
 ---
 
 <PageDescription>
 
-This project is a [Gatsby theme](https://www.gatsbyjs.org/docs/themes/what-are-gatsby-themes/) that empowers developers, writers, and designers to create fast, accessible sites that look and feel like Carbon. Follow along to start creating your own site.
+Rapidly build beautiful and accessible experiences. The Digital Design Library contains all the resources you need to get started.
 
 </PageDescription>
 
-## First steps
 
-1. **Create your site** – use the gatsby CLI to bootstrap your site with the starter
+## Resources
+Not sure know to add the resource card component
+
+## Digital Design Library
+
+The library provides front-end developers & engineers a collection of reusable React components to build websites and user interfaces. Adopting the library enables developers to use consistent markup, styles, and behavior in prototype and production work.
+
+
+## Install
+
+**Run the following command using**  npm:
 
    ```sh
-   npx gatsby new my-carbon-site https://github.com/carbon-design-system/gatsby-starter-carbon-theme
+   npm i @carbon/ibmdotcom-react carbon-components-react carbon-components carbon-icons
    ```
 
-2. **Start developing** – navigate into your directory with `cd my-carbon-site`.
+If you prefer Yarn, use the following command instead:
 
-   Start it up using one of the following snippets. You can tell which command to use based on the lock file at the root of your project (`yarn.lock` for yarn and `package-lock.json` for npm). For yarn, type `yarn develop` for npm, you'll use `npm run develop`.
+  ```sh
+   yarn add @carbon/ibmdotcom-react carbon-components-react carbon-components carbon-icons
+   ```
 
-3. **Make some changes!** – open [localhost:8000](//localhost:8000) in your browser to see your site running.
+## Getting Started
 
-   Each of the Items in your side bar correlates to a MDX file in your `src/pages/` directory. Navigate to a site and try editing the corresponding markdown file. You'll be able to see it update live!
+1. These components require the use of Webpack in your project. See 	our webpack.config.js for an example configuration.
 
-## 🔍 What's in here?
+2. Components do not import any of the styles themselves, use the scss 	or css from @carbon/ibmdotcom-styles to bring in styling.
 
-Lets check out the structure of our project
+3. For older browsers (e.g. IE11), polyfills listed in packages/	react/.storybook/polyfills.js file is required.
 
-    .
-    ├── LICENSE
-    ├── README.md
-    ├── gatsby-config.js
-    ├── node_modules
-    ├── package.json
-    ├── public
-    ├── src
-    │   ├── data
-    │   ├── gatsby-theme-carbon
-    │   ├── images
-    │   └── pages
-    └── yarn.lock
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+## Usage
 
-1.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site.
+View available React Components here. You can see usage information in several ways:
 
-    - **data** this is where you'll update your sidebar order and contents
-    - **images** you can colocate your images here or store them next to your pages, whichver you chose
-    - **gatsby-theme-carbon** this is where you'll override (known as shadowing) the default `gatsby-theme-carbon` components
-    - **pages** This is where most of your content will live. You'll represent each page with an MDX file.
+1. Clicking the blue Show Info icon in the top right corner of the selected component. You can see the list of available React props.
 
-1.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+2. Clicking the STORY tab at the bottom. This tab contains the code that shows how the component is being used.
 
-1.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description. You'll notice that all of the configuration for the site is coming from `gatsby-theme-carbon`
+3. Clicking the KNOBS tab at the bottom and changing values there. Most knobs are shown as something like `Button kind (kind)`  , where `kind` is the name of React prop.
 
-1.  **`LICENSE`**: Gatsby is licensed under the Apache 2.0 license.
+4. Clicking the ACTION LOGGER tab at the bottom and interacting with 	the selected component. You may see something like `onClick` which typically indicates that the event handler (React prop) with the same name is called. You can also expand the twistie to see the details of the event.
 
-1.  **`yarn.lock`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+5. Clicking the README tab at the bottom. You can see some more document for some components.
 
-1.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+## IBM.com Shell
+
+If you are looking to get started on a page, you can make use of the **<DotcomeShell**, which is a React based UI Shell that contains the <Masthead> and the <Footer>, using Carbon's grid.
+   
+See it in action at https://ibmdotcom-react.netlify.com/?path=/story/dotcom-shell--default.
+
+## Contributing
+
+We're always looking for contributors to help us fix bugs, build new features, or help us improve the project documentation. If you're interested, definitely check out our Contributing Guide and our Developer Guide! 
+
